@@ -110,7 +110,7 @@ module Jekyll
             top_users = []
 
             location = ENV['LOCATION']
-            uri = "https://api.github.com/search/users?q=#{location}+followers:>10+repos:>10+type:org&per_page=50&page=1&sort=followers&order=desc"
+            uri = "https://api.github.com/search/users?q=location:#{location}+followers:>10+repos:>10+type:org&per_page=50&page=1&sort=followers&order=desc"
             p "getting data from to #{uri}"
             
             raw_response = make_get_request(uri)
